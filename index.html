@@ -24,7 +24,7 @@
   <main>
     <section id="about">
       <h2>About This Site</h2>
-      <p>Welcome to your local guide for hunting in Vigo County, Indiana. Whether you're after deer, turkey, or small game, this site will help you prepare, understand regulations, and connect with a local hunting expert.</p>
+      <p>Welcome to your local guide for hunting in Vigo County, Indiana. Whether you're after deer, turkey, or small game, this site will help you prepare, understand regulations, and connect with a local hunting expert. For official hunting regulations, visit the <a href="https://www.in.gov/dnr/fish-and-wildlife/" target="_blank">Indiana DNR</a>.</p>
     </section>
 
     <section id="seasons">
@@ -38,7 +38,7 @@
 
     <section id="guide">
       <h2>Meet Your Guide</h2>
-      <img src="guide.jpg" alt="Local hunting guide in camo with deer" width="300" />
+      <img src="images/vigo-county-hunting-guide.jpg" alt="Local hunting guide in camo with deer in Vigo County" width="300" />
       <p>John, a Terre Haute native, has over 20 years of hunting experience and offers guided tours through state-approved areas. His expertise helps ensure a safe and successful hunt.</p>
     </section>
 
@@ -46,13 +46,13 @@
       <h2>Contact & Booking</h2>
       <form action="#" method="post">
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required />
+        <input type="text" id="name" name="name" required aria-label="Full Name" placeholder="Your Name" />
 
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required />
+        <input type="email" id="email" name="email" required aria-label="Email Address" placeholder="you@example.com" />
 
         <label for="message">Message:</label>
-        <textarea id="message" name="message" required></textarea>
+        <textarea id="message" name="message" required aria-label="Your Message" placeholder="How can we help?"></textarea>
 
         <button type="submit">Submit</button>
       </form>
@@ -60,7 +60,11 @@
   </main>
 
   <footer>
-    <p>&copy; 2025 Vigo County Hunting Guide. All rights reserved.</p>
+    <p>&copy; <span id="year"></span> Vigo County Hunting Guide. All rights reserved.</p>
   </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
