@@ -1,9 +1,34 @@
 <!DOCTYPE html>
-<html lang='en'>
-<head><title>About</title><meta name='description' content='About Vigo Hunt'><meta name='keywords' content='hunting, Vigo County'><link rel='stylesheet' href='styles.css'></head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn about Vigo Hunt and its mission">
+  <meta name="keywords" content="about hunting site, Vigo Indiana">
+  <title>About</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
 <body>
-<header><h1>About</h1><nav><a href='index.html'>Home</a> | <a href='about.html'>About</a> | <a href='guide.html'>Guide</a> | <a href='contact.html'>Contact</a> | <a href='gallery.html'>Gallery</a></nav></header>
-<p>This site is about legal and safe hunting in Vigo County, Indiana.</p>
-<footer>&copy; 2025 Vigo Hunt</footer>
+  <header>
+    <h1>About Vigo Hunt</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="seasons.html">Game Seasons</a></li>
+        <li><a href="guide.html">Your Guide</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h2>Mission Statement</h2>
+      <p>Vigo Hunt was founded to support ethical, legal, and safe hunting practices in western Indiana. We aim to provide hunters with the knowledge and support needed to enjoy the sport while preserving local wildlife and ecosystems.</p>
+      <img src="images/logo.png" alt="Vigo Hunt Logo" width="200" />
+    </section>
+  </main>
+  <footer><p>&copy; <span id="year"></span> Vigo Hunt</p></footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>

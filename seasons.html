@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Game Seasons for Vigo County">
+  <meta name="keywords" content="deer season, turkey season, hunting seasons Indiana">
+  <title>Game Seasons</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Game Seasons</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="seasons.html">Game Seasons</a></li>
+        <li><a href="guide.html">Your Guide</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h2>Hunting Calendar</h2>
+      <ul>
+        <li>Deer (Archery): Oct 1 - Jan 31</li>
+        <li>Turkey (Spring): Apr 26 - May 14</li>
+        <li>Small Game (Rabbit & Squirrel): Sep 15 - Feb 28</li>
+      </ul>
+      <table>
+        <caption>Season Overview</caption>
+        <thead><tr><th>Species</th><th>Start Date</th><th>End Date</th><th>Weapon</th></tr></thead>
+        <tbody>
+          <tr><td>Deer</td><td>Oct 1</td><td>Jan 31</td><td>Archery, Firearm</td></tr>
+          <tr><td>Turkey</td><td>Apr 26</td><td>May 14</td><td>Shotgun</td></tr>
+          <tr><td>Rabbit</td><td>Sep 15</td><td>Feb 28</td><td>Rifle</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+  <footer><p>&copy; <span id="year"></span> Vigo Hunt</p></footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

@@ -1,10 +1,43 @@
 <!DOCTYPE html>
-<html lang='en'>
-<head><title>Hunting Guide</title><meta name='description' content='Guide to hunting in Vigo County'><meta name='keywords' content='guide, hunting, Vigo'><link rel='stylesheet' href='styles.css'></head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Meet your local hunting guide in Vigo County">
+  <meta name="keywords" content="hunting guide, Vigo County, Indiana">
+  <title>Your Guide</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
 <body>
-<header><h1>Guide</h1><nav><a href='index.html'>Home</a> | <a href='about.html'>About</a> | <a href='guide.html'>Guide</a> | <a href='contact.html'>Contact</a> | <a href='gallery.html'>Gallery</a></nav></header>
-<ul><li>Get your license</li><li>Wear safety orange</li><li>Respect property lines</li></ul>
-<table border='1'><tr><th>Season</th><th>Dates</th></tr><tr><td>Deer</td><td>Nov 1 - Jan 1</td></tr></table>
-<footer>&copy; 2025 Vigo Hunt</footer>
+  <header>
+    <h1>Your Local Hunting Guide</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="seasons.html">Game Seasons</a></li>
+        <li><a href="guide.html">Your Guide</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h2>Guide Profile</h2>
+      <p>John Smith, a Terre Haute native and lifelong hunter, is certified through the Indiana Department of Natural Resources to provide guided hunting trips in Vigo County. With over two decades of experience, John ensures each trip is safe, informative, and fruitful.</p>
+      <img src="images/guide.jpg" alt="John Smith with gear" width="400" />
+    </section>
+    <section>
+      <h2>What’s Included</h2>
+      <ul>
+        <li>Scouting and site selection</li>
+        <li>Safety orientation</li>
+        <li>Field dressing assistance</li>
+        <li>Gear recommendations</li>
+      </ul>
+    </section>
+  </main>
+  <footer><p>&copy; <span id="year"></span> Vigo Hunt</p></footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>

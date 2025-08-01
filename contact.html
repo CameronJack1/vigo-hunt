@@ -1,9 +1,56 @@
 <!DOCTYPE html>
-<html lang='en'>
-<head><title>Contact Us</title><meta name='description' content='Contact Vigo Hunt'><meta name='keywords' content='contact, hunt'><link rel='stylesheet' href='styles.css'><script>function validateForm() { var name = document.forms['contactForm']['name'].value; if (name == '') { alert('Name must be filled out'); return false; } }</script></head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact form for Vigo County Hunting Guide" />
+  <meta name="keywords" content="contact, hunting booking, Vigo County" />
+  <title>Contact</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    function validateForm() {
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      if (!name || !email || !message) {
+        alert("All fields are required.");
+        return false;
+      }
+      return true;
+    }
+  </script>
+</head>
 <body>
-<header><h1>Contact</h1><nav><a href='index.html'>Home</a> | <a href='about.html'>About</a> | <a href='guide.html'>Guide</a> | <a href='contact.html'>Contact</a> | <a href='gallery.html'>Gallery</a></nav></header>
-<form name='contactForm' onsubmit='return validateForm()'>Name: <input type='text' name='name'><br>Email: <input type='email' name='email'><br><input type='submit'></form>
-<footer>&copy; 2025 Vigo Hunt</footer>
+  <header>
+    <h1>Contact Vigo Hunt</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="seasons.html">Game Seasons</a></li>
+        <li><a href="guide.html">Your Guide</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h2>Get in Touch</h2>
+      <form onsubmit="return validateForm()">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+  <footer><p>&copy; <span id="year"></span> Vigo Hunt</p></footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>
